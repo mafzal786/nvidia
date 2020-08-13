@@ -61,7 +61,9 @@ RUN yum makecache -y && \
     done && \
     rm -rf /var/cache/yum/*
 
-ENTRYPOINT ["nvidia-driver", "init"]
+#ENTRYPOINT ["nvidia-driver", "init"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
 
 
 
