@@ -39,8 +39,9 @@ RUN cd /tmp && \
                        --x-sysconfig-path=/tmp/null && \
     mkdir -p /usr/src/nvidia-$DRIVER_VERSION && \
     mv LICENSE mkprecompiled kernel /usr/src/nvidia-$DRIVER_VERSION && \
-    sed '9,${/^\(kernel\|LICENSE\)/!d}' .manifest > /usr/src/nvidia-$DRIVER_VERSION/.manifest && \
-    rm -rf /tmp/*
+    sed '9,${/^\(kernel\|LICENSE\)/!d}' .manifest > /usr/src/nvidia-$DRIVER_VERSION/.manifest 
+    
+# RUN rm -rf /tmp/*
 
 COPY nvidia-driver /usr/local/bin
 
