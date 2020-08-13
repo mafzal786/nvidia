@@ -1,4 +1,4 @@
-FROM nvidia/driver:440.64.00-rhcos4.4
+FROM nvidia/driver:418.87.01-rhel8
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 
